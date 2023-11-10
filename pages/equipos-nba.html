@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!--boostrap va primero-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+            <!--despues los demas estilos css-->
     <link rel="stylesheet" href="../css/style.css">
     <title>Equipos NBA</title>
 </head>
@@ -21,24 +24,39 @@
         
     
     
-    <main>
+    <main class="container-fluid grilla">
 
         
         <!--Recordatorio: Acá voy a poner los distintos equipos de la NBA uno abajo del otro y los voy a diferenciar por secciones por ejemplo: Sección .laker van a estar todos los productos de los laker-->
-        <h1>NBA </h1>
-            <section>
-                    <h2> Laker</h2>
-            </section>
-            <section>
-                <h2>Miami Heat</h2>
-            </section>
-            <section>
+        <h1>NBA</h1>
+
+
+            <section class="row">
                 <h2>Golden State Warrior</h2>
+                <p>¿Teniendo a curry quien no gana? Este famoso equipo de la NBA es considerado unos de los equipos mas temidos de las ultimas temporadas</p>
+                    <div class="col"> <img src="../img/curry.jpg" alt="Curry"> </div>
             </section>
 
 
+            <section class="row">
+                <h2>Chicago Bulls</h2>
+                <p>Este equipo considerado uno de los mas temibles en la epoca de los 90, donde lideraba Michael Jordan con 6 anillos de la NBA obtenidos a lo largo de su carrera</p>
+                    <div class="col">
+                        <img src="../img/Jordan.jpg" alt="Jordan">
+                    </div>
+            </section>
 
-    </main>
+
+            <section class="row">
+                <h2>Laker</h2>
+                <p>Este es un equipo con mucha historia de la que hablar, habiendo pasado jugadores estrellas como Kobe Briant, Shaquille O'Neal, Magic Johnson y actualmente LeBron James</p>
+                    <div class="col">
+                        <img src="../img/Kobe y Shaq.jpg" alt="Zapa Under" class="Kobe">
+                    </div>
+            </section>
+
+
+    </main clase >
     
     
     
@@ -52,5 +70,8 @@
             <a href="https://www.facebook.com/" target="_blank"> <img src="../img/facebook.png" alt="Logo Facebook"> </a>
         </Div>
     </footer>
+
+    bootstrap
+    <script src="../js/bootstrap.js"></script>
 </body>
 </html>
