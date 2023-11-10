@@ -243,7 +243,7 @@ img{
     
 }
 
-.ZapasCalzados{
+.ProductosCalzados{
     min-height: 200px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -251,17 +251,17 @@ img{
     border-radius: 8px;
 }
 
-.Calzado {
+.item-producto {
     background-color: #f2f2f2;
     padding: 20px;
     text-align: center;
 
 }
 
-.Calzado h2{
+.item-producto h2{
     margin-top: 10px;
 }
-.Calzado p{
+.item-producto p{
     margin-top: 5px;
     color: #999;
 }
@@ -281,6 +281,20 @@ img{
     width: 700px;
     height: 500px;
 
+}
+
+/*-------------------------Indumentaria------------------------------*/
+
+.ProductosIndumentaria{
+    min-height: 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+    border-radius: 8px;
+}
+.item-producto img{
+    width: 250px;
+    height: 150;
 }
 
 
