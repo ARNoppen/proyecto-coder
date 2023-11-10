@@ -226,14 +226,14 @@ img{
 
 
 
-.Nuestros-Calzados h1{
+.TituloProductos h1{
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 40px;
     padding: 30px;
 }
 
-.Nuestros-Calzados div{
+.TituloProductos div{
     display: flex;
     justify-content:space-around;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
