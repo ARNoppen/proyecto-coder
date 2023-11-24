@@ -1,1 +1,10 @@
-/*Prueba*/
+/*Prueba*/  
+
+@media (max-width: 900px){
+    label{
+        display: block;
+    }
+    nav{
+        display: none;
+    }
+}

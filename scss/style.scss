@@ -1,5 +1,5 @@
 
-@import './partials/variable';
+@import "./partials/variable";
 
 
 
@@ -26,7 +26,12 @@ header{
         display: flex;
         justify-content: center;
     }
+
+#checkbox_menu{
+    display: none;
+}
     
+
     nav{
         form{
             div{
@@ -34,7 +39,7 @@ header{
                     color: blue;
                     font-size: 50px;
                     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-                }
+                    }
             }
         }
         ul{

@@ -20,6 +20,9 @@ header h1 {
   display: flex;
   justify-content: center;
 }
+header #checkbox_menu {
+  display: none;
+}
 header nav form div label {
   color: blue;
   font-size: 50px;
@@ -246,5 +249,13 @@ footer div a img {
 }
 
 /*Prueba*/
+@media (max-width: 900px) {
+  label {
+    display: block;
+  }
+  nav {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
