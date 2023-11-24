@@ -249,11 +249,11 @@ footer div a img {
 }
 
 /*Prueba*/
-@media (max-width: 900px) {
-  label {
+@media (max-width: 376px) {
+  .navegacion-check label {
     display: block;
   }
-  nav {
+  .navegacion-nav {
     display: none;
   }
 }

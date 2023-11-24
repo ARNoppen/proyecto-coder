@@ -1,6 +1,5 @@
-
 @import "./partials/variable";
-
+@import "./partials/condicionales";
 
 
 
@@ -69,7 +68,7 @@ main {
     background-color:aqua;
 
     .hero{
-        width: 100%;
+        width: $ancho;
         height: 500px;
         background-image: url(../img/Pelota\ corona\ Fondo.jpg);
         background-position: center;
