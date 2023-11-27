@@ -69,7 +69,7 @@ main {
 
     .hero{
         width: $ancho;
-        height: 500px;
+        height: 100%;
         background-image: url(../img/Pelota\ corona\ Fondo.jpg);
         background-position: center;
         background-size: cover;
@@ -92,7 +92,7 @@ main {
 
     .ofertas{
         background-color:#1f9f61;
-        height: 700px;
+        height: 100%;
 
         h2{ 
             color: #000000;

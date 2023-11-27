@@ -1,4 +1,4 @@
-/*Prueba*/  
+/*variables*/  
 
 @media (max-width: 376px){
     .navegacion-check{
@@ -8,5 +8,22 @@
     }
     .navegacion-nav{
         display: none;
+    }
+}
+
+@media (max-width: 376px){
+    .hero{
+        p{
+            margin-top: 20%;
+        }
+    }
+}
+
+@media (max-width: 376px){
+
+    .ofertas{
+        h2{
+            margin-top: 20%;
+        }
     }
 }

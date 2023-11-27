@@ -52,7 +52,7 @@ main {
 }
 main .hero {
   width: 100%;
-  height: 500px;
+  height: 100%;
   background-image: url(../img/Pelota\ corona\ Fondo.jpg);
   background-position: center;
   background-size: cover;
@@ -73,7 +73,7 @@ main .hero p {
 }
 main .ofertas {
   background-color: #1f9f61;
-  height: 700px;
+  height: 100%;
 }
 main .ofertas h2 {
   color: #000000;
@@ -248,13 +248,23 @@ footer div a img {
   height: 80px;
 }
 
-/*Prueba*/
+/*variables*/
 @media (max-width: 376px) {
   .navegacion-check label {
     display: block;
   }
   .navegacion-nav {
     display: none;
+  }
+}
+@media (max-width: 376px) {
+  .hero p {
+    margin-top: 20%;
+  }
+}
+@media (max-width: 376px) {
+  .ofertas h2 {
+    margin-top: 20%;
   }
 }
 
