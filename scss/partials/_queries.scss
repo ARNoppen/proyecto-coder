@@ -2,12 +2,11 @@
 
 @media (max-width: 376px){
     .navegacion-check{
-        label{
-            display:block;
-        }
+        display: flex;
     }
     .navegacion-nav{
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 }
 
@@ -35,6 +34,20 @@
 
 @media (max-width: 376px){
     footer{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 376px){
+    .ProductosIndumentaria{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media(max-width: 376px){
+    .ProductosCalzados{
         display: flex;
         flex-direction: column;
     }

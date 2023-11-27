@@ -23,6 +23,9 @@ header h1 {
 header #checkbox_menu {
   display: none;
 }
+header nav form .navegacion-check {
+  display: none;
+}
 header nav form div label {
   color: blue;
   font-size: 50px;
@@ -250,11 +253,12 @@ footer div a img {
 
 /*queries*/
 @media (max-width: 376px) {
-  .navegacion-check label {
-    display: block;
+  .navegacion-check {
+    display: flex;
   }
   .navegacion-nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
   }
 }
 @media (max-width: 376px) {
@@ -275,6 +279,18 @@ footer div a img {
 }
 @media (max-width: 376px) {
   footer {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 376px) {
+  .ProductosIndumentaria {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 376px) {
+  .ProductosCalzados {
     display: flex;
     flex-direction: column;
   }
