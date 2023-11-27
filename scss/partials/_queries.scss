@@ -1,4 +1,4 @@
-/*variables*/  
+/*queries*/  
 
 @media (max-width: 376px){
     .navegacion-check{
@@ -21,9 +21,21 @@
 
 @media (max-width: 376px){
 
-    .ofertas{
-        h2{
-            margin-top: 20%;
-        }
+    .card-ofertas{
+        margin: 20%;
+    }
+}
+
+@media (max-width: 376px){
+    .marcas-imagenes{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 376px){
+    footer{
+        display: flex;
+        flex-direction: column;
     }
 }
