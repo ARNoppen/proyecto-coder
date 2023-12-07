@@ -6,24 +6,26 @@
         right: 1rem;
         cursor: pointer;
     }
-    /*
+    
     #menu-abrir{
         display: block;
         position: absolute;
         right: 1rem;
         cursor: pointer;
     }
-    */
+    
 
 
-        .navegacion{
+        .navegacion{    
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 1em;
+
+            .checkbox--menu:checked + .navegacion{
+                transform: translate(0);
         }
-    .checkbox--menu:checked + .navegacion{
-        transform: translate(0);
+
     }
 
 

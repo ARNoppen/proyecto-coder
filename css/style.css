@@ -273,21 +273,19 @@ footer div a img {
     right: 1rem;
     cursor: pointer;
   }
-  /*
-  #menu-abrir{
-      display: block;
-      position: absolute;
-      right: 1rem;
-      cursor: pointer;
+  #menu-abrir {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
   }
-  */
   .navegacion {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 1em;
   }
-  .checkbox--menu:checked + .navegacion {
+  .navegacion .checkbox--menu:checked + .navegacion {
     transform: translate(0);
   }
 }
