@@ -20,29 +20,43 @@ header h1 {
   display: flex;
   justify-content: center;
 }
-header #checkbox_menu {
+
+#checkbox_menu {
   display: none;
 }
-header nav form .navegacion-check {
+
+#menu {
   display: none;
 }
-header nav form div label {
+
+#menu-abrir {
+  display: none;
+}
+
+#menu-cerrar {
+  display: none;
+}
+
+nav div label {
   color: blue;
   font-size: 50px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-header nav ul {
+nav div span {
+  background-color: #14bcff;
+}
+nav ul {
   list-style: none;
   display: flex;
   justify-content: space-around;
 }
-header nav ul li {
+nav ul li {
   padding: 20px;
 }
-header nav ul li:hover {
+nav ul li:hover {
   background-color: white;
 }
-header nav ul li a {
+nav ul li a {
   text-decoration: none;
   color: rgb(73, 28, 254);
   font-size: 20px;
@@ -252,13 +266,43 @@ footer div a img {
 }
 
 /*queries*/
-@media (max-width: 376px) {
-  .navegacion-check {
-    display: flex;
+@media only screen and (max-width: 900px) {
+  #checkbox_menu {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
   }
-  .navegacion-nav {
+  /*
+  #menu-abrir{
+      display: block;
+      position: absolute;
+      right: 1rem;
+      cursor: pointer;
+  }
+  */
+  .navegacion {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    margin: 1em;
+  }
+  .checkbox--menu:checked + .navegacion {
+    transform: translate(0);
+  }
+}
+@media (max-width: 376px) {
+  .navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1em;
+  }
+  #menu-abrir {
+    display: block;
+    position: absolute;
+    right: 1rem;
+    cursor: pointer;
   }
 }
 @media (max-width: 376px) {
