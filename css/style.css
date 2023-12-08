@@ -172,9 +172,9 @@ main .marcas-imagenes {
   justify-content: space-between;
 }
 main .marcas-imagenes img {
-  width: 250px;
-  height: 250px;
-  margin: 50px;
+  width: 200px;
+  height: 200px;
+  margin: 40px;
 }
 
 .wsp {
@@ -272,23 +272,56 @@ footer iframe {
   width: 250px;
   height: 250px;
 }
+footer .container-formulario {
+  background-color: rgb(234, 0, 234);
+  border-radius: 8px;
+  text-align: center;
+  align-items: center;
+}
+footer .container-formulario .formulario h2 {
+  color: #4CC9F0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 50px;
+}
+footer .container-formulario .formulario p {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 20px;
+}
+footer .container-formulario .formulario form .campo {
+  width: 80%;
+  padding: 8px 3px;
+  font-size: 10px;
+  border: 2px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+footer .container-formulario .formulario form textarea {
+  max-width: 200px;
+  min-width: 200px;
+  max-height: 80px;
+  min-height: 60px;
+}
 footer .metodos-pagos h2 {
   color: #4CC9F0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 footer .metodos-pagos img {
-  margin: 20px;
-  width: 80px;
-  height: 60px;
+  margin: 10px;
+  width: 60px;
+  height: 50px;
+}
+footer .redes-sociales {
+  margin-top: 50px;
 }
 footer .redes-sociales h2 {
   color: #4CC9F0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 footer .redes-sociales a img {
-  margin: 20px;
-  width: 60px;
-  height: 60px;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
 }
 
 /*queries*/

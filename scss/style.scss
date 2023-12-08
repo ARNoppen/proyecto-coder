@@ -205,9 +205,9 @@ main {
         justify-content:space-between;
 
         img{ 
-            width: 250px;
-            height: 250px;
-            margin: 50px;
+            width: 200px;
+            height: 200px;
+            margin: 40px;
         }
     } 
 
@@ -329,28 +329,64 @@ footer{
         height: 250px;
     }
 
+    .container-formulario{
+        background-color: rgb(234, 0, 234);
+        border-radius: 8px;
+        text-align: center;
+        align-items:center;
+        .formulario{
+            h2{
+                color: #4CC9F0;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 50px;
+            }
+            p{
+                color: black;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 20px;
+            }
+            form{
+                .campo{
+                    width: 80%;
+                    padding: 8px 3px;
+                    font-size: 10px;
+                    border: 2px;
+                    margin-bottom: 5px;
+                    border-radius: 5px;
+                }
+                textarea{
+                    max-width: 200px;
+                    min-width: 200px;
+                    max-height: 80px;
+                    min-height: 60px;
+                }
+            }
+        }
+    }
+
     .metodos-pagos{
         h2{
             color: #4CC9F0;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         img{
-            margin: 20px;
-            width: 80px;
-            height: 60px;
+            margin: 10px;
+            width: 60px;
+            height: 50px;
         }
     }
 
     .redes-sociales{
+        margin-top: 50px;
         h2{
             color: #4CC9F0;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         a{
             img{
-                margin: 20px;
-                width: 60px;
-                height: 60px;   
+                margin: 10px;
+                width: 40px;
+                height: 40px;   
             }
         }
     }
