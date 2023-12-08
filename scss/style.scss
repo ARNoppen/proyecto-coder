@@ -303,21 +303,40 @@ main {
 
 
 footer{
-    background-color: grey;
+    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items:flex-end;
     padding: 20px;
 
-    div{
+
+    iframe{
+        width: 250px;
+        height: 250px;
+    }
+
+    .metodos-pagos{
+        h2{
+            color: #4CC9F0;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+        img{
+            margin: 20px;
+            width: 80px;
+            height: 60px;
+        }
+    }
+
+    .redes-sociales{
         h2{
             color: #4CC9F0;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         }
         a{
             img{
-                width: 80px;
-                height: 80px;   
+                margin: 20px;
+                width: 60px;
+                height: 60px;   
             }
         }
     }

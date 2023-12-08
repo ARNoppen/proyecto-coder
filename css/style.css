@@ -249,19 +249,33 @@ main .marcas-imagenes img {
 
 /*-------------------------FOOTER------------------------------*/
 footer {
-  background-color: grey;
+  background-color: black;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   padding: 20px;
 }
-footer div h2 {
+footer iframe {
+  width: 250px;
+  height: 250px;
+}
+footer .metodos-pagos h2 {
   color: #4CC9F0;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
-footer div a img {
+footer .metodos-pagos img {
+  margin: 20px;
   width: 80px;
-  height: 80px;
+  height: 60px;
+}
+footer .redes-sociales h2 {
+  color: #4CC9F0;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+footer .redes-sociales a img {
+  margin: 20px;
+  width: 60px;
+  height: 60px;
 }
 
 /*queries*/
@@ -312,6 +326,14 @@ footer div a img {
     display: none;
   }
 }
+/* -----------------------Media query footer (max 900px)-----------------------*/
+@media only screen and (max-width: 900px) {
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
 /* -----------------------Media query header (max 376px)-----------------------*/
 @media (max-width: 376px) {
   #menu-abrir {
@@ -348,8 +370,21 @@ footer div a img {
 }
 /* -----------------------Media query de calzados (max 376px)-----------------------*/
 @media only screen and (max-width: 376px) {
+  .ProductosCalzados {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 376px) {
   .calzados-titulo-marcas p {
     display: none;
+  }
+}
+/* -----------------------Media query de Indumentaria (max 376px)-----------------------*/
+@media (max-width: 376px) {
+  .ProductosIndumentaria {
+    display: flex;
+    flex-direction: column;
   }
 }
 /* -----------------------Media query del footer (max 376px)-----------------------*/
@@ -357,18 +392,7 @@ footer div a img {
   footer {
     display: flex;
     flex-direction: column;
-  }
-}
-@media (max-width: 376px) {
-  .ProductosIndumentaria {
-    display: flex;
-    flex-direction: column;
-  }
-}
-@media (max-width: 376px) {
-  .ProductosCalzados {
-    display: flex;
-    flex-direction: column;
+    align-items: center;
   }
 }
 
