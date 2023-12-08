@@ -84,7 +84,7 @@
 /* -----------------------Media query header (max 376px)-----------------------*/
 
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
     #menu-abrir{
         display: block;
         position: absolute;
@@ -96,7 +96,7 @@
 /* -----------------------Media query main (max 376px)-----------------------*/
 
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
     .navegacion{
         display: flex;
         flex-direction: column;
@@ -106,7 +106,7 @@
 }
 
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
     .hero{
         p{
             margin-top: 20%;
@@ -115,7 +115,7 @@
 }
 
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
 
     .card-ofertas{
         margin: 20%;
@@ -124,7 +124,7 @@
 
 
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
     .marcas-imagenes{
         display: flex;
         flex-direction: column;
@@ -158,7 +158,7 @@
 
 /* -----------------------Media query de Indumentaria (max 376px)-----------------------*/
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
     .ProductosIndumentaria{
         display: flex;
         flex-direction: column;
@@ -171,7 +171,7 @@
 /* -----------------------Media query del footer (max 376px)-----------------------*/
 
 
-@media (max-width: 376px){
+@media only screen and (max-width: 376px){
     footer{
         display: flex;
         flex-direction: column;
