@@ -105,7 +105,8 @@ main {
             color: aqua;
             text-align: center;
             font-size: 30px;
-            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;        
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;      
+            padding: 30px;
         }
     }
 
@@ -330,13 +331,13 @@ footer{
     }
 
     .container-formulario{
-        background-color: rgb(234, 0, 234);
+        background-color: rgb(0, 235, 0);
         border-radius: 8px;
         text-align: center;
         align-items:center;
         .formulario{
             h2{
-                color: #4CC9F0;
+                color: black;
                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
                 font-size: 50px;
             }
@@ -353,6 +354,7 @@ footer{
                     border: 2px;
                     margin-bottom: 5px;
                     border-radius: 5px;
+                    cursor: pointer;
                 }
                 textarea{
                     max-width: 200px;
