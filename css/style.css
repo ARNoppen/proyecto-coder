@@ -247,6 +247,19 @@ main .marcas-imagenes img {
   height: 250px;
 }
 
+.tipo-productos {
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  border-radius: 8px;
+}
+.tipo-productos .item-producto {
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: center;
+}
+
 /*-------------------------FOOTER------------------------------*/
 footer {
   background-color: black;
