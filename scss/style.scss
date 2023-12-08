@@ -5,8 +5,8 @@
 
 /*--------RESET-------*/
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0%;
+    padding: 0px;
 }
 
 /* -------------HEADER-----------*/
@@ -84,7 +84,7 @@ header{
 /* ------------------------------------MAIN---------------------*/
 
 main {
-    background-color:aqua;
+
 
     .hero{
         width: $ancho;
@@ -112,6 +112,7 @@ main {
     .ofertas{
         background-color:#1f9f61;
         height: 100%;
+        margin-top: 0%;
 
         h2{ 
             color: #000000;
@@ -187,6 +188,7 @@ main {
             font-family: fantasy;
             font-weight: 200;
             text-align: center;
+            margin-top: 0px;
         }
         p{
             color: black;
