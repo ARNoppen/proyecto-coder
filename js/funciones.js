@@ -3,7 +3,7 @@
 let usuario = prompt("Ingrese el usuario");
 let contrasenia = prompt("Ingrese la contraseña");
 let mensaje = ("Hola " + usuario + " si estas leyendo esto es porque te dije mi contraseña o sos tan crack que la adivinaste😎🤑");
-let mensaje4 = ("jijija no sabes la contraseña");
+let mensaje4 = ("Malas noticias " + usuario + " no sabes la contraseña jijija");
 
 if (contrasenia == "soychom") {
     alert(mensaje);
