@@ -1,6 +1,6 @@
 // prompt para pedir datos
 
-let usuario = prompt("Ingrese el usuario");
+let usuario = prompt("Ingresa tu nombre");
 let contrasenia = prompt("Ingrese la contraseña");
 let mensaje = ("Hola " + usuario + " si estas leyendo esto es porque te dije mi contraseña o sos tan crack que la adivinaste😎🤑");
 let mensaje4 = ("Malas noticias " + usuario + " no sabes la contraseña jijija");
