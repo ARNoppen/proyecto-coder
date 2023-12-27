@@ -24,19 +24,17 @@ function login( contrasenia){
     }
 }
 
+// Funcion para calcular un pago en 3 cuotas 
+function pagoCuotas(monto){
+    let resultados = monto / 3;
+    alert ("Debes pagar 3 cuotas de " + resultados + " pesos por mes");
+}
+
 
 
 let usuario = prompt("Ingrese su usuario");
     usuario = usuario.toLowerCase();
 let contrasenia = login();
-
-
-// Funcion para calcular un pago en 3 cuotas 
-
-function pagoCuotas(monto){
-    let resultados = monto / 3;
-    alert ("Debes pagar 3 cuotas de " + resultados + " pesos por mes");
-}
 
 
 
