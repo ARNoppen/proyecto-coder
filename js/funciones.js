@@ -24,6 +24,7 @@ function login( contrasenia){
     }
 }
 
+
 // Funcion para calcular un pago en 3 cuotas 
 function pagoCuotas(monto){
     let resultados = monto / 3;
@@ -35,6 +36,21 @@ function pagoCuotas(monto){
 let usuario = prompt("Ingrese su usuario");
     usuario = usuario.toLowerCase();
 let contrasenia = login();
+
+
+
+
+//Array para agregar productos al carrito
+const carrito = [];
+let producto;
+
+while (confirm ("¿Desea agregar productos?") == true){
+    producto = prompt("Escribir un producto: ");
+    carrito.push (producto);
+    console.table(producto);
+}
+
+
 
 
 
