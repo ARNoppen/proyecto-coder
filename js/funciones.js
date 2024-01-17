@@ -47,12 +47,26 @@ let producto;
 while (confirm ("¿Desea agregar productos?") == true){
     producto = prompt("Escribir un producto: ");
     carrito.push (producto);
-    console.table(producto);
+    console.log(producto);
 }
 
+alert("Tenes estos productos en el carrito: " + carrito );
 
 
+// Sacar productos del carrito
+while(confirm("¿Desea sacar algún producto?") == true){
+    let pocisionProducto = prompt("Elegir la posición del producto que desea sacar (Si no sabe la posición de su producto escribir 'nose la posicion')");
+    if(pocisionProducto == "nose la posicion"){
+        
+        let saberPosicion = carrito.indexOf(prompt("Escribir el producto para saber su posición: "));
+        alert("La posicion de su producto es: " + saberPosicion);
+    }else{
+    carrito.splice(pocisionProducto,1);
+    console.log(carrito);
+    }
+}
 
+alert("Tenes estos productos en el carrito: " + carrito );
 
 let monto = parseFloat(prompt("Ingrese el monto que desea pagar en cuotas"));
 let resultado = pagoCuotas(monto);
