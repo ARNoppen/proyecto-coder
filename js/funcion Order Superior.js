@@ -38,3 +38,8 @@ console.log(encontrarCategoriaLog);
 const mostrarNombres = productoDisponible.map((arrayNombres) => arrayNombres.nombre )
 console.log(mostrarNombres)
 alert("Ahora podemos ver los nombres del objeto " + mostrarNombres)
+
+
+// el metodo Reduce sirve para simplificar el array/objeto a un solo resultado 
+const precioCompra = carritoProductos.reduce((acumular, total) => acumular + total.precio, 0)
+console.log(precioCompra)

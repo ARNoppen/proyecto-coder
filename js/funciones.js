@@ -1,4 +1,6 @@
-
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       Mi Proyecto
+//------------------------------------------------------------------------------------------------------------------------------------------------
 
 // Funcion para loguearse, solo tenes 3 intentos para escribir la contraseña correcta.
 function login( contrasenia){
@@ -38,6 +40,9 @@ let usuario = prompt("Ingrese su usuario");
 let contrasenia = login();
 
 
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       Objetos
+//------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //Objeto de productos disponibles para luego agregar al carrito
@@ -53,6 +58,9 @@ const productoDisponible = [
 // Objeto del carrito donde se van a agregar los productos
 let carritoProductos = []
 
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       Lógica
+//------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 //Recorrer objeto
@@ -62,7 +70,7 @@ for(let i = 0; i<productoDisponible.length; i++){
 }
 
 //Utilizo metodo map para mostrar los productos que están disponibles
-const mostrarNombres = productoDisponible.map((arrayNombres) => arrayNombres.nombre )
+const mostrarNombres = productoDisponible.map((arrayNombres) => arrayNombres.nombre)
 console.log(mostrarNombres)
 alert("Estos son los productos disponibles: " + mostrarNombres)
 
@@ -91,6 +99,12 @@ while(confirm("¿Desea eliminar algún producto?") == true && carritoProductos !
 if(carritoProductos == ""){
 alert("Ya no te quedan productos en el carrito que puedas eliminar😪");
 }
+
+//Total del precio de todos los productos
+const precioCompra = productoDisponible.reduce((acumular, total) => acumular + total.precio, 0)
+console.log(precioCompra)
+alert("El precio total es de " + precioCompra + "$")
+
 
 let monto = parseFloat(prompt("Ingrese el monto que desea pagar en cuotas"));
 let resultado = pagoCuotas(monto);
