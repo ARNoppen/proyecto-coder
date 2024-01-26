@@ -2,6 +2,18 @@
 //                                                       Mi Proyecto
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
+
+//Mostrar día de hoy por consola
+const dias = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado",]
+
+//Acá le digo que nro de día es
+/*
+const dia = fecha.getDay()
+
+console.log ("Hoy es " + dias[dia])
+*/
+
+
 // Funcion para loguearse, solo tenes 3 intentos para escribir la contraseña correcta.
 function login( contrasenia){
     let errores = 3;
@@ -35,10 +47,20 @@ function pagoCuotas(monto){
 
 
 
-let usuario = prompt("Ingrese su usuario");
-    usuario = usuario.toLowerCase();
+
+
+
+
+//Titulo de bienvenida al usuario que ingresa
+const tituloBienvenida = document.getElementById("tituloBienvenida");
+console.log(tituloBienvenida);   
+const usuario = prompt("Ingrese su usuario");
+//usuario = usuario.toLowerCase(); 
+let mensaje = "Bienvenid@ " + usuario;
+
 let contrasenia = login();
 
+tituloBienvenida.innerText = mensaje;
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //                                                       Objetos
