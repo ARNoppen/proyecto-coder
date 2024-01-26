@@ -52,7 +52,7 @@ function pagoCuotas(monto){
 
 
 //Titulo de bienvenida al usuario que ingresa
-const tituloBienvenida = document.getElementById("tituloBienvenida");
+const tituloBienvenida = document.querySelector("#tituloBienvenida");
 console.log(tituloBienvenida);   
 const usuario = prompt("Ingrese su usuario");
 //usuario = usuario.toLowerCase(); 
@@ -62,23 +62,48 @@ let contrasenia = login();
 
 tituloBienvenida.innerText = mensaje;
 
+
+
+
+
+
+const btn = document.querySelector("#no-clic");
+
+btn.onclick = () => {
+    alert("te dije que no hagas clic, ahora estoy enojado ❌😡❌")
+}
+
+
+
+
+
+
+
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //                                                       Objetos
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+
+
+
+
+
 //Objeto de productos disponibles para luego agregar al carrito
 const productoDisponible = [
-    { nombre: "zapas axel", categoria: "zapatillas", precio: 70000 },
-    { nombre: "nike", categoria: "zapatillas", precio: 120000 },
-    { nombre: "adidas", categoria: "zapatillas", precio: 50000 },
-    { nombre: "camiseta", categoria: "remeras", precio: 20000 },
-    { nombre: "short", categoria: "pantalones", precio: 180000 }
+    { id : 1, nombre: "zapas axel", categoria: "zapatillas", precio: 70000 },
+    { id : 2, nombre: "zapas nike", categoria: "zapatillas", precio: 120000 },
+    { id : 3, nombre: "zapas adidas", categoria: "zapatillas", precio: 50000 },
+    { id : 4, nombre: "camiseta nike", categoria: "remeras", precio: 22000 },
+    { id : 5, nombre: "camiseta adidas", categoria: "remeras", precio: 20000 },
+    { id : 6, nombre: "short adidas", categoria: "pantalones", precio: 190000 },
+    { id : 7, nombre: "short nike", categoria: "pantalones", precio: 210000 },
+    { id : 8, nombre: "short nike", categoria: "pantalones", precio: 210000 }
 ];
 
 
-// Objeto del carrito donde se van a agregar los productos
-let carritoProductos = []
+
+const carritoProductos = [];
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //                                                       Lógica
@@ -86,10 +111,13 @@ let carritoProductos = []
 
 
 //Recorrer objeto
-for(let i = 0; i<productoDisponible.length; i++){
-    console.log("nombre: " + productoDisponible[i].nombre);
-    console.log("precio: " + productoDisponible[i].precio);
-}
+console.log("Productos:");
+productoDisponible.forEach(element => {
+    console.log("Nombre: " + element.nombre);
+    console.log("Precio: " + element.precio);
+});
+
+
 
 //Utilizo metodo map para mostrar los productos que están disponibles
 const mostrarNombres = productoDisponible.map((arrayNombres) => arrayNombres.nombre)
@@ -97,9 +125,16 @@ console.log(mostrarNombres)
 alert("Estos son los productos disponibles: " + mostrarNombres)
 
 
+
+
+
+
+
+
 // Bucle para agregar productos disponibles al carrito
 while (confirm ("¿Desea agregar al carrito algún producto disponible?") == true){
     let agregarCarritoProductos = prompt("Favor elegir algún producto disponible: ");
+    // indexof para saber la pocisión del producto
     let posicionProductos = carritoProductos.indexOf(agregarCarritoProductos);
     productoDisponible.splice (posicionProductos,1);
     carritoProductos.push (agregarCarritoProductos)
@@ -122,6 +157,24 @@ if(carritoProductos == ""){
 alert("Ya no te quedan productos en el carrito que puedas eliminar😪");
 }
 
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       DOM para carrito
+//------------------------------------------------------------------------------------------------------------------------------------------------
+const cardOfertas = document.querySelector(".card-ofertas")
+
+
+
+
+
+
+
+
+
 //Total del precio de todos los productos
 const precioCompra = productoDisponible.reduce((acumular, total) => acumular + total.precio, 0)
 console.log(precioCompra)
@@ -132,6 +185,26 @@ let monto = parseFloat(prompt("Ingrese el monto que desea pagar en cuotas"));
 let resultado = pagoCuotas(monto);
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       Código viejo (bucle para agregar y sacar productos al carrito)
+//------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 

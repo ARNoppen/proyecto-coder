@@ -10,6 +10,7 @@
     <!-- Boxicons CSS -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
 
 
     <title>MVP</title>
@@ -17,7 +18,8 @@
 <body>
     <header>
         <h1 id="tituloBienvenida">MVP SHOP</h1>
-        <script src="js/Carrito de compras.js"></script>
+        <button id="no-clic" class="btn">NO HACER CLIC</button>
+        <script src="js/funciones.js"></script>
 
 
     <nav class="navegacion-nav">
@@ -113,7 +115,7 @@
                 <h2>Formulario de contacto</h2>
                 <p>Escríbenos y en breve nos pondremos en contacto!</p>
                 <form action="#" autocomplete="off">
-                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo">
+                    <input id="nombre" type="text" name="nombre" placeholder="Ingresa tu nombre" class="campo">
                     <input type="text" name="email" placeholder="Ingresa tu email" class="campo"> 
                     <input type="text" name="teléfono" placeholder="Ingresa tu numero de teléfono" class="campo"> 
                     <textarea name="mensaje" placeholder="Ingresa tu mensaje"></textarea>

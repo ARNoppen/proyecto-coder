@@ -1,3 +1,7 @@
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       Practicando Clase constructora y métodos
+//------------------------------------------------------------------------------------------------------------------------------------------------
+
 const productoDisponible = [
     { id : 1, nombre: "zapas axel", categoria: "zapatillas", precio: 70000 },
     { id : 2, nombre: "zapas nike", categoria: "zapatillas", precio: 120000 },
@@ -14,7 +18,7 @@ class carritoProductos{
     constructor (productoDisponible){
         this.productoDisponible = productoDisponible
     }
-
+//Metodo para buscar productos por ID
     getProductoById(id){
         const productoId = this.productoDisponible.find(item => item.id == id);
         if(productoId){
@@ -22,11 +26,12 @@ class carritoProductos{
         }else
         return "No se encontró el producto"
     }
+// Metodo para buscar producto por Nombre
     getProductoByNombre(nombre){
         const nombreProducto = this.productoDisponible.filter(item => item.nombre.toLowerCase().includes(nombre.toLowerCase()) );
         return nombreProducto;
     }
-
+//Metodo para agregar descuento
     addDiscount(precio){
         if(descuento == true){
         const agregarDescuento = this.productoDisponible.map( productoDisponible => {
@@ -40,9 +45,9 @@ class carritoProductos{
     }
 }
 
-const carrito = new carritoProductos(productoDisponible);
+const carritoBusqueda = new carritoProductos(productoDisponible);
 const id = prompt("Favor ingresar el ID del producto");
-const productoEncontradoId = carrito.getProductoById(id);
+const productoEncontradoId = carritoBusqueda.getProductoById(id);
 
 
 
