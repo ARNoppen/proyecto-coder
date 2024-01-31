@@ -2,11 +2,10 @@
 @import "./partials/condicionales";
 
 
-
 /*--------RESET-------*/
 *{
-    margin: 0%;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 /* -------------HEADER-----------*/
@@ -20,7 +19,7 @@ header{
         color: blue;
         font-size: 100px;
         font-family: 'Tilt Prism', cursive;
-        font-weight: 900;
+        font-weight: 900px;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -39,7 +38,7 @@ header{
 #menu-abrir{
     display: none;
 }
- 
+
 #menu-cerrar{
     display: none;
 }
@@ -48,7 +47,6 @@ header{
 
 
     nav{
-        
             div{
                 label{
                     color: blue;
@@ -83,7 +81,8 @@ header{
 /* ------------------------------------MAIN---------------------*/
 
 main {
-
+margin: 0;
+padding: 0  ;
 
     .hero{
         width: $ancho;
@@ -112,7 +111,7 @@ main {
     .ofertas{
         background-color:#1f9f61;
         height: 100%;
-        margin-top: 0%;
+        padding-top: 0%;
 
         h2{ 
             color: #000000;
@@ -181,6 +180,7 @@ main {
         display:flex;
         flex-direction: column;
         justify-content: center;
+        padding-top: 5%;
 
         h2{
             color:black;
@@ -224,6 +224,18 @@ main {
         width: 50px;
     }
 }
+
+.boton{
+    text-decoration: none;
+    color: #000000;
+    background-color: rgb(140, 223, 246);
+    font-family: sans-serif;
+    font-size: 20;
+    padding: 4px;
+    margin: 60px;
+    border-radius: 8px;
+}
+
 
 /*-------------------------CALZADOS------------------------------*/
 
@@ -313,6 +325,93 @@ main {
 }
 
 
+
+
+
+/*-------------------------------------------------------Login------------------------------------------*/
+
+.login-fondo{
+    background: url(../img/Pelota\ corona\ Fondo.jpg) no-repeat center;
+    background-size:cover;
+    height: 100vh;
+}
+
+.login-container{
+    margin-top: 4%;
+    width: 420px;
+    height: 520px;
+    background-color: rgba(0, 0, 0, 0.816);
+    color: white;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    padding: 90px 40px;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
+        .logo-mvp-login{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            position: absolute;
+            top: -50px;
+            left: calc(50% - 50px);
+        }
+            h1{
+                margin: 0;
+                padding: 0 0 20px;
+                text-align: center;
+                font-size: 24px;
+            }
+            form{
+
+            
+                label{
+                    margin: 0;
+                    padding: 0;
+                    font-weight: bold;
+                    display: block;
+                }
+                input{
+                    width: 100%;
+                    margin-bottom: 15%;
+                    border: none;
+                    border-bottom: 1px solid white;
+                    background: transparent;
+                    outline: none;
+                    height: 40px;
+                    color: white;
+                    font-size: 16px;
+                }
+                button{
+                    width: 100%;
+                    border-bottom: 1px solid white;
+                    background-color: red;
+                    border: none;
+                    outline: none;
+                    height: 40px;
+                    color: white;
+                    font-size: 14px;
+                    &:hover{
+                        background-color: rgb(251, 110, 110);
+                    }
+                }
+                div{
+                    margin-top: 10%;
+                }
+            }
+
+}
+
+
+
+
+
+
+
+
+
 /*-------------------------FOOTER------------------------------*/
 
 
@@ -320,9 +419,8 @@ footer{
     background-color: black;
     display: flex;
     justify-content: space-between;
-    align-items:flex-end;
+    align-items:end;
     padding: 20px;
-
 
     iframe{
         width: 250px;
