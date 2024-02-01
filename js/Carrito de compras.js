@@ -56,11 +56,14 @@ console.log(productoEncontradoNombre);
 
 
 
+//------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       CARRITO DE COMPRAS FUNCIONAL
+//------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-
-const containerProductos = document.querySelector("#containerProductos")
-
+const containerProductos = document.querySelector("#containerProductos");
+const mostrarCarrito = document.querySelector("#mostrarCarrito");
+const containerCarrito = document.querySelector("#containerCarrito");
 
 const productoDisponible = [
     { id : 1, nombre: "Zapas axel", categoria: "zapatillas", precio: 70000, img: "../img/Zapa Axel.jpg"},
@@ -76,6 +79,7 @@ const productoDisponible = [
 
 const carritoProductos = [];
 
+//recorrer array de productos disponibles para pushearlo a carrito productos
 productoDisponible.forEach(element => {
     let container = document.createElement("div");
     container.className = "card-productos";
@@ -104,7 +108,47 @@ productoDisponible.forEach(element => {
         console.log(carritoProductos);
     });
 
-
-
 });
 
+//escuchador de eventos para que al momento de darle clic al carrito, se abra el carrito como tal
+mostrarCarrito.addEventListener("click", () => {
+    containerCarrito.innerHTML = ""
+    containerCarrito.style.display = "flex";
+    const funcionalCarrito = document.createElement("div");
+    funcionalCarrito.className = "total-carrito";
+    funcionalCarrito.innerHTML = `
+        <h1>Carrito</h1>
+    `;
+    containerCarrito.append(funcionalCarrito);
+
+    const funcionalCarritoBoton = document.createElement("h1");
+    funcionalCarritoBoton.innerText = "❌";
+    funcionalCarritoBoton.className = "total-carrito-boton";
+
+    funcionalCarritoBoton.addEventListener("click", () => {
+        containerCarrito.style.display = "none";
+    })
+
+    funcionalCarrito.append(funcionalCarritoBoton)
+
+
+
+    carritoProductos.forEach((productos) => {
+        let contenidoDelCarrito = document.createElement("div");
+        contenidoDelCarrito.className = "contenido-del-carrito";
+        contenidoDelCarrito.innerHTML = `
+        <img src="${productos.img}">
+        <h2>${productos.nombre}</h2>
+        <p>Precio: $${productos.precio}</p>
+        `;
+
+        containerCarrito.append(contenidoDelCarrito);
+    });
+
+    const totalCarrito = carritoProductos.reduce((acumular, total) => acumular + total.precio, 0);
+
+    const totalPagar = document.createElement("div");
+    totalPagar.className = "total-container"
+    totalPagar.innerHTML = `Total a pagar: $${totalCarrito}`;
+    containerCarrito.append(totalPagar);
+});

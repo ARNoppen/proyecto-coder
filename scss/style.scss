@@ -286,28 +286,8 @@ padding: 0  ;
     }
 }
 
-#containerProductos{
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 2%;
-    margin-left: 15%;
-    margin-right: 15%;
 
-}
-.card-productos{
-    border-style: solid;
-    border-color: #14bcff;
-    border-radius: 12px;
-    background-color: #14bcff51;
-    margin: 20px;
 
-    img{
-        width: 250px;
-        height: 200px;
-        margin-bottom: 5px;
-    }
-}
 
 /*-------------------------EQUIPOS NBA HECHO CON BOOSTRAP------------------------------*/
 
@@ -350,8 +330,97 @@ padding: 0  ;
 }
 
 
+/*------------------------------------------Carrito de compras-----------------------------------------------------------*/
 
 
+#containerProductos{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-left: 15%;
+    margin-right: 15%;
+
+}
+.card-productos{
+    border-style: solid;
+    border-color: #14bcff;
+    border-radius: 12px;
+    background-color: #14bcff51;
+    margin: 20px;
+
+    img{
+        width: 250px;
+        height: 200px;
+        margin-bottom: 5px;
+    }
+}
+
+.container-carrito{
+    width: 80%;
+    margin-left: 20%;
+    max-height: 60vh;
+    color: white;
+    background-color: rgba(0, 15, 34, 0.895);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow: auto;
+    z-index: 9;
+    top: 12vh;
+    scrollbar-color: none;
+    .contenido-del-carrito{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        margin: 10px;
+            img{
+                width: 80px;
+                height: 80px;
+            }
+    }
+}
+
+.total-carrito{
+    display: flex;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    width: 100%;
+        h1{
+            text-align: center;
+        }
+        .total-carrito-boton{
+            cursor: pointer;
+        }
+}
+
+
+.total-container{
+    font-size: 25px;
+    padding: 20px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.cerrar-container-carrito{
+    display: none;
+}
+
+
+//tomo .login como clase para la imagen del carrito y el login
+.login{
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 10px;
+    &:hover{
+        background-color: #00b7ff;
+    }
+}
 
 /*-------------------------------------------------------Login------------------------------------------*/
 
