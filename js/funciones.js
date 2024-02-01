@@ -18,21 +18,17 @@ console.log ("Hoy es " + dias[dia])
 function login( contrasenia){
     let errores = 3;
     while ( errores >= 1) {
-        let mensaje = ("Bienvenido " + usuario + " 😎✔✨");
-        let mensajeError = ("Malas noticias " + usuario + " solo te quedan " + (errores - 1) + " oportunidades");
-
         let contrasenia = prompt("Ingrese la contraseña");
-        contrasenia = contrasenia.toLowerCase();
 
         if (contrasenia != "contraseña123") {
-            alert(mensajeError);
+            alert("Malas noticias " + usuario + " solo te quedan " + (errores - 1) + " oportunidades");
             errores = errores - 1;
             if(contrasenia != "contraseña123" && errores == 0){
                 alert("ya no te quedan intentos 😔❌😪 favor recargar la página");
             }
         }
         else if (contrasenia == "contraseña123") {
-            alert(mensaje);
+            alert("Bienvenido " + usuario + " 😎✔✨");
             errores = 0;
     }
     }
@@ -49,13 +45,11 @@ function pagoCuotas(monto){
 
 
 
-
-
 //Titulo de bienvenida al usuario que ingresa
 const tituloBienvenida = document.querySelector("#tituloBienvenida");
 console.log(tituloBienvenida);   
-const usuario = prompt("Ingrese su usuario");
-//usuario = usuario.toLowerCase(); 
+let usuario = prompt("Ingrese su usuario");
+
 let mensaje = "Bienvenid@ " + usuario;
 
 let contrasenia = login();
@@ -64,27 +58,13 @@ tituloBienvenida.innerText = mensaje;
 
 
 
-
-
-
-const btn = document.querySelector("#no-clic");
-
-btn.onclick = () => {
-    alert("te dije que no hagas clic, ahora estoy enojado ❌😡❌")
-}
-
-
-
-
+/*
 
 
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
 //                                                       Objetos
 //------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
 
 
 
@@ -171,10 +151,6 @@ const cardOfertas = document.querySelector(".card-ofertas")
 
 
 
-
-
-
-
 //Total del precio de todos los productos
 const precioCompra = productoDisponible.reduce((acumular, total) => acumular + total.precio, 0)
 console.log(precioCompra)
@@ -211,3 +187,4 @@ let resultado = pagoCuotas(monto);
 
 
 
+*/

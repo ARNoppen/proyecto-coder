@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Login</title>
 </head>
+
 <body>
+
     <header>
         <h1></h1>
         <nav class="navegacion-nav">
@@ -41,14 +43,15 @@
         <div class="login-container">
             <img src="../img/jugador-de-baloncesto.png" class="logo-mvp-login" alt="LogoMVP">
             <h1>Iniciar sesión</h1>
-            <form>
+            <form id="formLogin">
+
                 <!-- Correo electrónico -->
                 <label for="inputEmail">Correo electrónico</label>
                 <input id="inputEmail" type="email" placeholder="Ingresa tu correo electrónico">
                 <!-- Contraseña -->
 
                 <label for="inputPassword">Contraseña</label>
-                <input id="password" type="password" placeholder="Ingresa tu Contraseña">
+                <input id="inputPassword" type="password" placeholder="Ingresa tu Contraseña">
 
                 <button>Entrar</button>
             <div>
@@ -59,15 +62,10 @@
         </div>
     </div>
 
+    
 
 
-
-
-
-
-
-
-
+    <script src="../js/Login.js"></script>
 
 
     <footer id="Contacto">
@@ -104,3 +102,4 @@
     </footer>
 </body>
 </html>
+

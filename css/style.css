@@ -196,12 +196,15 @@ main .marcas-imagenes img {
 .boton {
   text-decoration: none;
   color: #000000;
-  background-color: rgb(140, 223, 246);
+  background-color: rgb(84, 217, 254);
   font-family: sans-serif;
   font-size: 20;
   padding: 4px;
-  margin: 60px;
+  margin: 20px;
   border-radius: 8px;
+}
+.boton:hover {
+  background-color: rgba(40, 40, 245, 0.844);
 }
 
 /*-------------------------CALZADOS------------------------------*/
@@ -243,6 +246,28 @@ main .marcas-imagenes img {
 .ProductosCalzados p {
   margin-top: 5px;
   color: #999;
+}
+
+#containerProductos {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 2%;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.card-productos {
+  border-style: solid;
+  border-color: #14bcff;
+  border-radius: 12px;
+  background-color: rgba(20, 188, 255, 0.3176470588);
+  margin: 20px;
+}
+.card-productos img {
+  width: 250px;
+  height: 200px;
+  margin-bottom: 5px;
 }
 
 /*-------------------------EQUIPOS NBA HECHO CON BOOSTRAP------------------------------*/
@@ -338,12 +363,20 @@ main .marcas-imagenes img {
   height: 40px;
   color: white;
   font-size: 14px;
+  border-radius: 20px;
 }
 .login-container form button:hover {
   background-color: rgb(251, 110, 110);
 }
 .login-container form div {
-  margin-top: 10%;
+  margin-top: 20px;
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(199, 199, 199);
+}
+.login-container form div a:hover {
+  color: white;
 }
 
 /*-------------------------FOOTER------------------------------*/
