@@ -112,10 +112,15 @@ productoDisponible.forEach(element => {
             categoria : element.categoria,
             precio : element.precio,
             img : element.img,
-            cantidad : element.cantidad
+            cantidad : element.cantidad,
+            guardarLocal();
         });
         }
         console.log(carritoProductos);
     });
 });
 
+
+const guardarLocal = () => {
+localStorage.setItem("carrito", JSON.stringify (carritoProductos));
+};
