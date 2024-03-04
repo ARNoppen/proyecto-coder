@@ -1,190 +1,66 @@
-//------------------------------------------------------------------------------------------------------------------------------------------------
-//                                                       Mi Proyecto
-//------------------------------------------------------------------------------------------------------------------------------------------------
+//escuchador de eventos para que al momento de darle clic al carrito, se abra el carrito como tal
+const pintarCarrito = () => {
+    containerCarrito.innerHTML = ""
+    containerCarrito.style.display = "flex";
+    const funcionalCarrito = document.createElement("div");
+    funcionalCarrito.className = "total-carrito";
+    funcionalCarrito.innerHTML = `
+        <h1>Carrito</h1>
+    `;
+    containerCarrito.append(funcionalCarrito);
 
+    const funcionalCarritoBoton = document.createElement("h1");
+    funcionalCarritoBoton.innerText = "❌";
+    funcionalCarritoBoton.className = "total-carrito-boton";
 
-//Mostrar día de hoy por consola
-const dias = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado",]
+    funcionalCarritoBoton.addEventListener("click", () => {
+        containerCarrito.style.display = "none";
+    })
 
-//Acá le digo que nro de día es
-/*
-const dia = fecha.getDay()
-
-console.log ("Hoy es " + dias[dia])
-*/
-
-
-// Funcion para loguearse, solo tenes 3 intentos para escribir la contraseña correcta.
-function login( contrasenia){
-    let errores = 3;
-    while ( errores >= 1) {
-        let contrasenia = prompt("Ingrese la contraseña");
-
-        if (contrasenia != "contraseña123") {
-            alert("Malas noticias " + usuario + " solo te quedan " + (errores - 1) + " oportunidades");
-            errores = errores - 1;
-            if(contrasenia != "contraseña123" && errores == 0){
-                alert("ya no te quedan intentos 😔❌😪 favor recargar la página");
-            }
-        }
-        else if (contrasenia == "contraseña123") {
-            alert("Bienvenido " + usuario + " 😎✔✨");
-            errores = 0;
-    }
-    }
-}
-
-
-// Funcion para calcular un pago en 3 cuotas 
-function pagoCuotas(monto){
-    let resultados = monto / 3;
-    alert ("Debes pagar 3 cuotas de " + resultados + " pesos por mes");
-}
+    funcionalCarrito.append(funcionalCarritoBoton)
 
 
 
+    carritoProductos.forEach((productos) => {
+        let contenidoDelCarrito = document.createElement("div");
+        contenidoDelCarrito.className = "contenido-del-carrito";
+        contenidoDelCarrito.innerHTML = `
+        <img src="${productos.img}">
+        <h2>${productos.nombre}</h2>
+        <p>Precio: $${productos.precio}</p>
+        <p>Cantidad: ${productos.cantidad}</p>
+        <p>Total: $${productos.cantidad * productos.precio}</p>
+        `;
 
+        containerCarrito.append(contenidoDelCarrito);
 
-//Titulo de bienvenida al usuario que ingresa
-const tituloBienvenida = document.querySelector("#tituloBienvenida");
-console.log(tituloBienvenida);   
-let usuario = prompt("Ingrese su usuario");
+        let eliminar = document.createElement("span");
+        eliminar.innerText = "❌";
+        eliminar.className = "eliminar-producto";
+        contenidoDelCarrito.append(eliminar);
 
-let mensaje = "Bienvenid@ " + usuario;
+        eliminar.addEventListener("click", eliminarProducto);
+    });
 
-let contrasenia = login();
+    const totalCarrito = carritoProductos.reduce((acumular, total) => acumular + total.precio * total.cantidad, 0);
 
-tituloBienvenida.innerText = mensaje;
-
-
-
-/*
-
-
-
-//------------------------------------------------------------------------------------------------------------------------------------------------
-//                                                       Objetos
-//------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-//Objeto de productos disponibles para luego agregar al carrito
-const productoDisponible = [
-    { id : 1, nombre: "zapas axel", categoria: "zapatillas", precio: 70000 },
-    { id : 2, nombre: "zapas nike", categoria: "zapatillas", precio: 120000 },
-    { id : 3, nombre: "zapas adidas", categoria: "zapatillas", precio: 50000 },
-    { id : 4, nombre: "camiseta nike", categoria: "remeras", precio: 22000 },
-    { id : 5, nombre: "camiseta adidas", categoria: "remeras", precio: 20000 },
-    { id : 6, nombre: "short adidas", categoria: "pantalones", precio: 190000 },
-    { id : 7, nombre: "short nike", categoria: "pantalones", precio: 210000 },
-    { id : 8, nombre: "short nike", categoria: "pantalones", precio: 210000 }
-];
-
-
-
-const carritoProductos = [];
-
-//------------------------------------------------------------------------------------------------------------------------------------------------
-//                                                       Lógica
-//------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-//Recorrer objeto
-console.log("Productos:");
-productoDisponible.forEach(element => {
-    console.log("Nombre: " + element.nombre);
-    console.log("Precio: " + element.precio);
-});
-
-
-
-//Utilizo metodo map para mostrar los productos que están disponibles
-const mostrarNombres = productoDisponible.map((arrayNombres) => arrayNombres.nombre)
-console.log(mostrarNombres)
-alert("Estos son los productos disponibles: " + mostrarNombres)
-
-
-
-
-
-
-
-
-// Bucle para agregar productos disponibles al carrito
-while (confirm ("¿Desea agregar al carrito algún producto disponible?") == true){
-    let agregarCarritoProductos = prompt("Favor elegir algún producto disponible: ");
-    // indexof para saber la pocisión del producto
-    let posicionProductos = carritoProductos.indexOf(agregarCarritoProductos);
-    productoDisponible.splice (posicionProductos,1);
-    carritoProductos.push (agregarCarritoProductos)
-    console.log(productoDisponible);
-    console.log(carritoProductos);
-}
-
-alert("Tenes estos productos en el carrito: " + carritoProductos );
-
-
-
-// Bucle para eliminar productos del carrito
-while(confirm("¿Desea eliminar algún producto?") == true && carritoProductos != ""){
-    let sacarProducto = prompt("Elegir el producto que desea sacar");
-    let pocisionProducto = carritoProductos.indexOf(sacarProducto);
-    carritoProductos.splice(pocisionProducto,1);
-    console.log(carritoProductos);
-}
-if(carritoProductos == ""){
-alert("Ya no te quedan productos en el carrito que puedas eliminar😪");
+    const totalPagar = document.createElement("div");
+    totalPagar.className = "total-container"
+    totalPagar.innerHTML = `Total a pagar: $${totalCarrito}`;
+    containerCarrito.append(totalPagar);
 }
 
 
 
 
 
+mostrarCarrito.addEventListener("click", pintarCarrito); 
 
-//------------------------------------------------------------------------------------------------------------------------------------------------
-//                                                       DOM para carrito
-//------------------------------------------------------------------------------------------------------------------------------------------------
-const cardOfertas = document.querySelector(".card-ofertas")
+const eliminarProducto = () =>{
+    const encontrarId = carritoProductos.find((element) => element.id);
 
-
-
-
-
-//Total del precio de todos los productos
-const precioCompra = productoDisponible.reduce((acumular, total) => acumular + total.precio, 0)
-console.log(precioCompra)
-alert("El precio total es de " + precioCompra + "$")
-
-
-let monto = parseFloat(prompt("Ingrese el monto que desea pagar en cuotas"));
-let resultado = pagoCuotas(monto);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//------------------------------------------------------------------------------------------------------------------------------------------------
-//                                                       Código viejo (bucle para agregar y sacar productos al carrito)
-//------------------------------------------------------------------------------------------------------------------------------------------------
-
-
-
-
-
-
-*/
+    carritoProductos = carritoProductos.filter((carritoId) =>{
+        return carritoId != encontrarId;
+    })
+    pintarCarrito();
+};
