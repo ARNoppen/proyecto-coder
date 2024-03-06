@@ -1,3 +1,4 @@
+/*
 //-----------------Sitio Login--------------
 const inputEmail = document.querySelector("#inputEmail");
 const inputPassword = document.querySelector("#inputPassword");
@@ -16,3 +17,4 @@ formulario.addEventListener('submit', (evento) =>{
     console.log(evento);
     validarUsuario();
 })
+*/
