@@ -384,6 +384,7 @@ padding: 0  ;
                 height: 80px;
             }
     }
+
 }
 
 .total-carrito{
@@ -426,6 +427,14 @@ padding: 0  ;
     &:hover{
         background-color: #00b7ff;
     }
+}
+
+.restar{
+    cursor: pointer;
+}
+
+.sumar{
+    cursor: pointer;
 }
 
 /*-------------------------------------------------------Login------------------------------------------*/

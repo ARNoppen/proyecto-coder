@@ -77,7 +77,7 @@ const productoDisponible = [
 ];
 
 
-let carritoProductos = [];
+let carritoProductos = JSON.parse(localStorage.getItem("carrito")) || [];
 
 //recorrer array de productos disponibles para pushearlo a carrito productos
 productoDisponible.forEach(element => {
@@ -113,10 +113,10 @@ productoDisponible.forEach(element => {
             precio : element.precio,
             img : element.img,
             cantidad : element.cantidad,
-            guardarLocal();
         });
         }
         console.log(carritoProductos);
+        guardarLocal();
     });
 });
 
@@ -124,3 +124,4 @@ productoDisponible.forEach(element => {
 const guardarLocal = () => {
 localStorage.setItem("carrito", JSON.stringify (carritoProductos));
 };
+

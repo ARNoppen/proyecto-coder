@@ -22,17 +22,40 @@ const pintarCarrito = () => {
 
 
     carritoProductos.forEach((productos) => {
+
         let contenidoDelCarrito = document.createElement("div");
         contenidoDelCarrito.className = "contenido-del-carrito";
         contenidoDelCarrito.innerHTML = `
         <img src="${productos.img}">
         <h2>${productos.nombre}</h2>
         <p>Precio: $${productos.precio}</p>
-        <p>Cantidad: ${productos.cantidad}</p>
+        <p><span class="restar"> - </span> Cantidad: ${productos.cantidad}<span class="sumar"> + </span></p>
         <p>Total: $${productos.cantidad * productos.precio}</p>
         `;
 
         containerCarrito.append(contenidoDelCarrito);
+
+        let restar = contenidoDelCarrito.querySelector(".restar");
+
+        restar.addEventListener("click", () => {
+            if(productos.cantidad != 0){
+                productos.cantidad--;
+            }
+                pintarCarrito();
+                    
+            if(productos.cantidad == 0){
+                eliminarProducto();
+            }
+            guardarLocal();
+        });
+
+        let sumar = contenidoDelCarrito.querySelector(".sumar");
+
+        sumar.addEventListener("click", () => {
+                productos.cantidad++;
+                guardarLocal();
+                pintarCarrito();
+        })
 
         let eliminar = document.createElement("span");
         eliminar.innerText = "❌";
@@ -62,5 +85,6 @@ const eliminarProducto = () =>{
     carritoProductos = carritoProductos.filter((carritoId) =>{
         return carritoId != encontrarId;
     })
+    guardarLocal();
     pintarCarrito();
 };

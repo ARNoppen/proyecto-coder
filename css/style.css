@@ -356,6 +356,10 @@ main .marcas-imagenes img {
   display: none;
 }
 
+.eliminar-producto {
+  cursor: pointer;
+}
+
 .login {
   width: 30px;
   height: 30px;
@@ -364,6 +368,14 @@ main .marcas-imagenes img {
 }
 .login:hover {
   background-color: #00b7ff;
+}
+
+.restar {
+  cursor: pointer;
+}
+
+.sumar {
+  cursor: pointer;
 }
 
 /*-------------------------------------------------------Login------------------------------------------*/
