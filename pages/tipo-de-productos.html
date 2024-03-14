@@ -28,7 +28,7 @@
                 <li><a href="./indumentaria.html">Indumentarias</a></li>
                 <li><a href="./tipo-de-productos.html">Tipo de Productos</a></li>
                 <li><a href="#Contacto">Contacto</a></li>
-                <li> <a href="#"><img src="../img/carrito-de-compras.png" alt="carrito de compras" class="login"></a></li>
+                <li> <a href="#"id="mostrarCarrito"><img src="../img/carrito-de-compras.png" alt="carrito de compras" class="login"></a></li>
                 <li> <a href="./login.html"><img src="../img/Login.png" alt="Login" class="login"></a></li>
             </ul> 
         </Nav>
@@ -40,49 +40,9 @@
         <div class="TituloProductos">
             <h1>Otros productos</h1>
         </div>
-            <section class="tipo-productos">
-                <div class="item-producto">
-                        <img src="../img/Antiparra.jpg" alt="Antiparra">
-                        <h2>Antiparra</h2>
-                        <p>Precio: $1500</p>
-                        <button>Agregar al carrito</button>
-                </div>
-                <div class="item-producto">
-                        <img src="../img/AroDeBasquet.jpg" alt="AroDeBasquet">
-                        <h2>Aro de Basquet</h2>
-                        <p>Precio: $55000</p>
-                        <button>Agregar al carrito</button>
-                </div>
-                <div class="item-producto">
-                        <img src="../img/Tablero.jpg" alt="Tablero">
-                        <h2>Tablero</h2>
-                        <p>Precio: $90000</p>
-                        <button>Agregar al carrito</button>
-                </div>
-            <div class="item-producto">
-                    <img src="../img/Pizarra.jpg" alt="Pizarra">
-                    <h2>Pizarra</h2>
-                    <p>Precio: $1000</p>
-                    <button>Agregar al carrito</button>
-            </div>
-            <div class="item-producto">
-                    <img src="../img/Muñequera.jpg" alt="Muñequera">
-                    <h2>Muñequera</h2>
-                    <p>Precio: $800</p>
-                    <button>Agregar al carrito</button>
-            </div>
-            <div class="item-producto">
-                    <img src="../img/Pechera.jpg" alt="Pechera">
-                    <h2>Pechera</h2>
-                    <p>Precio: $6000</p>
-                    <button>Agregar al carrito</button>
-            </div>  
-            <div class="item-producto">
-                    <img src="../img/Pelota.jpg" alt="Pelota">
-                    <h2>Pelota</h2>
-                    <p>Precio: $10000</p>
-                    <button>Agregar al carrito</button>
-            </div>
+            <section>
+                <div id="containerProductos" class="item-producto"></div>
+                <div id="containerCarrito" class="container-carrito"></div>
         </section>
     </div>
     </main>
@@ -122,5 +82,7 @@
             </div>
         </div>
     </footer>
+    <script src="../js/Carrito de compras.js"></script>
+    <script src="../js/funciones.js"></script>
 </body>
 </html>

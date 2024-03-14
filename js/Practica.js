@@ -86,6 +86,64 @@ const productoDisponible = [
 const carritoProductos = [];
 
 //------------------------------------------------------------------------------------------------------------------------------------------------
+//                                                       Practicando Clase constructora y métodos
+//------------------------------------------------------------------------------------------------------------------------------------------------
+/*
+class carritoProductos{
+    constructor (productoDisponible){
+        this.productoDisponible = productoDisponible
+    }
+//Metodo para buscar productos por ID
+    getProductoById(id){
+        const productoId = this.productoDisponible.find(item => item.id == id);
+        if(productoId){
+            return productoId;
+        }else
+        return "No se encontró el producto"
+    }
+// Metodo para buscar producto por Nombre
+    getProductoByNombre(nombre){
+        const nombreProducto = this.productoDisponible.filter(item => item.nombre.toLowerCase().includes(nombre.toLowerCase()) );
+        return nombreProducto;
+    }
+//Metodo para agregar descuento
+    addDiscount(precio){
+        if(descuento == true){
+        const agregarDescuento = this.productoDisponible.map( productoDisponible => {
+            const discount = (productoDisponible.precio * 10)  / 100;
+            return { id : productoDisponible.id, nombre : productoDisponible.nombre, discount : discount}
+        })
+        console.log(agregarDescuento);
+        }else{
+            return console.log("No se aplicó descuento");
+        }
+    }
+}
+
+const carritoBusqueda = new carritoProductos(productoDisponible);
+const id = prompt("Favor ingresar el ID del producto");
+const productoEncontradoId = carritoBusqueda.getProductoById(id);
+
+
+
+const carritoNombre = new carritoProductos(productoDisponible);
+const nombreFiltro = prompt ("Favor ingresar el nombre del producto");
+const productoEncontradoNombre = carritoNombre.getProductoByNombre(nombreFiltro);
+
+
+const carritoPriceWhitDiscount = new carritoProductos(productoDisponible);
+const descuento = confirm("¿Desea agregar descuento del 10%?");
+const mostrarDescuento = carritoPriceWhitDiscount.addDiscount(descuento);
+
+
+
+console.log(productoEncontradoId);
+console.log(productoEncontradoNombre);
+*/
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------------------
 //                                                       Lógica
 //------------------------------------------------------------------------------------------------------------------------------------------------
 
